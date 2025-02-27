@@ -154,17 +154,13 @@ require('lazy').setup({
   },
 
   {
-    "chiendo97/intellij.vim",
-    lazy = false,
+    -- Theme inspired by Atom
+    'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd("set background=light")
-      vim.cmd("colorscheme intellij")
-      -- Custom overrides for file explorer
-      vim.api.nvim_set_hl(0, "Directory", { fg = "#61AFEF", bold = true }) -- Folders
-      vim.api.nvim_set_hl(0, "NvimTreeFolderName", { link = "Directory" }) -- Link to same
+      vim.cmd.colorscheme 'onedark'
     end,
-  },   
+  },
 
   {
     -- Set lualine as statusline
@@ -173,7 +169,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'PaperColor',
+        theme = 'onedark',
         component_separators = '|',
         section_separators = '',
       },

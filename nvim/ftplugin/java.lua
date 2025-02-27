@@ -8,9 +8,8 @@ local extendedClientCapabilities = jdtls.extendedClientCapabilities
 extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
 
 local workspace_dir = require("lspconfig.server_configurations.jdtls").default_config.init_options.workspace
-local launcher = vim.fn.expand(
-  "~/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.700.v20231214-2017.jar")
-
+local launcher = vim.fn.expand("~/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher.cocoa.macosx.x86_64_1.2.1100.v20240722-2106.jar")
+                                                                        
 local lombok_jar = vim.fn.expand("~/.local/share/nvim/mason/packages/jdtls/lombok.jar")
 
 local os_config = vim.fn.expand("~/.local/share/nvim/mason/packages/jdtls/config_mac_arm")
@@ -156,11 +155,11 @@ local config = {
         runtimes = {
           {
             name = "JavaSE-17",
-            path = vim.fn.expand("~/.sdkman/candidates/java/17.0.9-amzn"),
+            path = vim.fn.expand("~/.sdkman/candidates/java/17.0.7-amzn"),
           },
           {
             name = "JavaSE-1.8",
-            path = vim.fn.expand("~/.sdkman/candidates/java/8.0.302-open"),
+            path = vim.fn.expand("~/.sdkman/candidates/java/8.0.372-amzn"),
           },
         },
       },
